@@ -12,6 +12,17 @@ import './calcstyle.css'
         const [operator, setOperator] = useState('*')
         const [result, setResult] = useState('')
         const [error, setError] = useState('')
+
+        const validInput = () => {
+            if (Number(input1) === NaN || 0 || '' && 
+                 Number(input2) === 0 ||
+                 Number(input2) === NaN || 0 || ''&&
+                 Number(input1) === 0){
+                     return setError('please provide a # for each input')
+
+                 }
+
+        }
     const Calculator = () => {
             
 
@@ -56,6 +67,7 @@ import './calcstyle.css'
                 <form>
                     <input className="result" disabled defaultValue={result} readOnly/>
                 </form>
+                <div className="error" value=
             </div>
         )
     }
