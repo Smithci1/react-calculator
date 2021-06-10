@@ -50,11 +50,11 @@ import './calcstyle.css'
                 </form>
                 <form>
 
-                    <input className="equal" type="button" value="=" onClick={Calculator}></input>
+                    <input className="equal" type="button" value="=" onClick={Calculator} onChange={event => setOperator(event.target.value)}></input>
                 </form>
 
                 <form>
-                    <input className="result" value={result} readOnly/>
+                    <input className="result" disabled defaultValue={result} readOnly/>
                 </form>
             </div>
         )

@@ -1,4 +1,4 @@
-import Calculator from './components/calculator/Calculate'
+import Calculate from './components/calculator/Calculate'
 import Title from './components/title/title'
 import './App.css';
 
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <div>
         < Title />
-      < Calculator />
+      < Calculate />
 
       </div>
       </div>
