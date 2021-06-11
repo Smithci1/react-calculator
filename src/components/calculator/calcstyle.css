@@ -1,0 +1,56 @@
+.val1 {
+    margin-left: 20px;
+    border-width: 10px;
+    border-color: cornflowerblue; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+}
+.val2{
+    margin-left: 20px;
+    border-width: 10px;
+    border-color: cornflowerblue; 
+   
+}
+.op {
+    margin-left: 20px;
+    border-width: 10px; 
+    border-color: cornflowerblue; 
+  
+}
+
+.equal {
+    margin-left: 20px;
+    border-width: 10px; 
+    border-color: cornflowerblue; 
+}
+   
+
+.result {
+margin-left: 20px;
+border-width: 10px; 
+border-color: cornflowerblue; 
+
+}
+.select{
+    display: block;
+}
+.calc {
+justify-content: center;
+display: flex;
+margin-top: 150px;
+
+  
+    
+}
+.error {
+justify-content:center;
+    margin-top: 50px;
+    font-family: modern;
+    font-size: xx-large ;
+    letter-spacing: 5px;
+    color: red;
+    text-align: center;
+
+
+}
+
