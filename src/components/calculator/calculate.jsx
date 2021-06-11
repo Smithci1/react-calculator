@@ -9,24 +9,12 @@ import './calcstyle.css'
     
         const [input1, setInput1] = useState('')
         const [input2, setInput2] = useState('')
-        const [operator, setOperator] = useState('*')
+        const [operator, setOperator] = useState('')
         const [result, setResult] = useState('')
         const [error, setError] = useState('')
 
-        const validInput = () => {
-            if (!Number || Number(input1) === isNaN &&
-                !Number || Number(input2) === isNaN){
-                     return setError('please provide a # for each input')
-                 }
-
-                 
-        }
     const Calculator = () => {
-          if (!validInput){
-              return setError('')
-          }
-              
-               else if (operator === "minus"){
+              if (operator === "minus"){
                   
                   return setResult(Number(input1) - Number(input2))
                   
@@ -39,9 +27,19 @@ import './calcstyle.css'
                 }else if (operator === "add"){
                     return setResult(Number(input1) + Number(input2))
                     
-                }else
-                return setError('please choose a valid operator')
-            }
+                } else if (operator === '') {
+                    return setError( 'please select an operator') 
+                    
+                } 
+            else if (!Number || Number(input1) !== '' &&
+                !Number || Number(input2) !== ''){
+                     return setError('please provide a # for each input')
+                     }
+
+    }               
+            
+    
+    
         
         
         return (
@@ -51,6 +49,7 @@ import './calcstyle.css'
                 </form>
 
             <select className="op" value={operator} onChange={event => setOperator(event.target.value)}>
+                <option value=''></option>
                 <option value="times">*</option>
                 <option value="divide">÷</option>
                 <option value="add">+</option>
@@ -68,7 +67,7 @@ import './calcstyle.css'
                 <form>
                     <input className="result" disabled defaultValue={result} readOnly/>
                 </form>
-                <div className="error">{error}</div>
+              <div className="error">{error}</div>
                 </div>
         )
     }

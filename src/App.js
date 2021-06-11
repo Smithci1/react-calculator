@@ -10,9 +10,8 @@ function App() {
       <div>
         < Title />
       < Calculate />
-
-      </div>
-      </div>
+ </div> 
+  </div>
 
   );
 }
