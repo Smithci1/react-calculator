@@ -35,13 +35,22 @@ border-color: cornflowerblue;
     display: block;
 }
 .calc {
-    align-content: center;
+justify-content: center;
 display: flex;
 margin-top: 150px;
-margin-left: 375px;
+
   
     
 }
 .error {
-    display: flex;
+justify-content:center;
+    margin-top: 50px;
+    font-family: modern;
+    font-size: xx-large ;
+    letter-spacing: 5px;
+    color: red;
+    text-align: center;
+
+
 }
+

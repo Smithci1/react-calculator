@@ -36,6 +36,7 @@ import './calcstyle.css'
 
     }               
         return (
+            <div className="container">
             <div className="calc">
                 <form>
                     <input className="val1" value={input1} onChange={event => setInput1(event.target.value)} type="text"/>
@@ -57,7 +58,8 @@ import './calcstyle.css'
                 <form>
                     <input className="result" disabled defaultValue={result} readOnly/>
                 </form>
-              <div className="error">{error}</div>
+                </div> 
+              <div className="error">{error}</div>            
                 </div>
         )
     }

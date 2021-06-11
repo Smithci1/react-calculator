@@ -3,17 +3,3 @@ justify-content: center;
 display: flex;
 color:cornflowerblue;
 }
-.title {
-  margin-left: 400px;
-    margin-top: 150px;
-    font-family: cast iron;
-    font-size: xxx-large ;
-    letter-spacing: 20px;
-    color: cadetblue;
-  
-  }
-  .title :hover {
-    color: cornflowerblue;
-    text-justify: kashida;
-    animation: ease;
-  }
