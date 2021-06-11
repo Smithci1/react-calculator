@@ -22,13 +22,13 @@ import './calcstyle.css'
             return setError('please provide a # for each input')    
         }    
             else if (operator === "minus"){  
-                return setResult(Number(input1) - Number(input2)) 
+                return setResult(Number(input1) - Number(input2),setError(''))               
         }   else if (operator ===  "times"){
-                return setResult(Number(input1) * Number(input2))            
+                return setResult(Number(input1) * Number(input2), setError(''))                         
         }   else if (operator === "divide"){
-                return setResult(Number(input1) / Number(input2))            
+                return setResult(Number(input1) / Number(input2), setError(''))                           
         }   else if (operator === "add"){
-                return setResult(Number(input1) + Number(input2))            
+                return setResult(Number(input1) + Number(input2),  setError(''))          
         } 
             else if (operator === '') {
                 return setError( 'please select an operator') 
