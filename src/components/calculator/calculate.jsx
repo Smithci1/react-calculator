@@ -12,13 +12,21 @@ import './calcstyle.css'
         const [operator, setOperator] = useState('')
         const [result, setResult] = useState('')
         const [error, setError] = useState('')
+        
+
+        // const invalidInputs = () => { 
+        //     return (
+        // (!Number || Number(input1) !==  &&
+        //         !Number || Number(input2) !== '') ) 
+        // }
+                    
 
     const Calculator = () => {
-              if (operator === "minus"){
+                if (operator === "minus"){
                   
                   return setResult(Number(input1) - Number(input2))
-                  
-                }else if (operator ===  "multiply"){
+                 
+                }else if (operator ===  "times"){
                     return setResult(Number(input1) * Number(input2))
                     
                 }else if (operator === "divide"){
@@ -27,15 +35,17 @@ import './calcstyle.css'
                 }else if (operator === "add"){
                     return setResult(Number(input1) + Number(input2))
                     
-                } else if (operator === '') {
-                    return setError( 'please select an operator') 
-                    
                 } 
-            else if (!Number || Number(input1) !== '' &&
-                !Number || Number(input2) !== ''){
-                     return setError('please provide a # for each input')
-                     }
+                else if (operator === '') {
+                     return setError( 'please select an operator') 
 
+                 } 
+             else if(!Number.isNaN(Number(input1)) && !Number.isNaN(Number(input2)) &&
+                      input1 !== '' &&
+                       input2 !== '') {
+                           setResult('')
+                      return setError('please provide a # for each input')
+                      } 
     }               
             
     
