@@ -14,34 +14,35 @@ import './calcstyle.css'
         const [error, setError] = useState('')
 
         const validInput = () => {
-            if (Number(input1) === NaN || 0 || '' && 
-                 Number(input2) === 0 ||
-                 Number(input2) === NaN || 0 || ''&&
-                 Number(input1) === 0){
+            if (!Number || Number(input1) === isNaN &&
+                !Number || Number(input2) === isNaN){
                      return setError('please provide a # for each input')
-
                  }
 
+                 
         }
     const Calculator = () => {
-            
-
-            if (operator === "minus"){
-               
-                return setResult(Number(input1) - Number(input2))
-               
-            }else if (operator ===  "multiply"){
-                return setResult(Number(input1) * Number(input2))
-                
-            }else if (operator === "divide"){
-               return setResult(Number(input1) / Number(input2))
-               
-            }else if (operator === "add"){
-                return setResult(Number(input1) + Number(input2))
-                
-            }else
+          if (!validInput){
+              return setError('')
+          }
+              
+               else if (operator === "minus"){
+                  
+                  return setResult(Number(input1) - Number(input2))
+                  
+                }else if (operator ===  "multiply"){
+                    return setResult(Number(input1) * Number(input2))
+                    
+                }else if (operator === "divide"){
+                    return setResult(Number(input1) / Number(input2))
+                    
+                }else if (operator === "add"){
+                    return setResult(Number(input1) + Number(input2))
+                    
+                }else
                 return setError('please choose a valid operator')
-        }
+            }
+        
         
         return (
             <div className="calc">
@@ -67,8 +68,7 @@ import './calcstyle.css'
                 <form>
                     <input className="result" disabled defaultValue={result} readOnly/>
                 </form>
-                <div className="error" value=
-            </div>
+                <div className="error">{error}</div>
+                </div>
         )
     }
-            
